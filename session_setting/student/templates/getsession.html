@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Get Session</title>
+</head>
+<body>
+    <h3>The session is:</h3><br><br>
+    <p>the name is {{name}}</p>
+    <hr>
+    {{request.session.get_session_cookie_age}} <hr>
+    {{request.session.get_expiry_age}} <hr>
+    {{request.session.get_expiry_date}} <hr>
+    {{request.session.get_expire_at_browser_close}} <hr>
+
+</body>
+</html>

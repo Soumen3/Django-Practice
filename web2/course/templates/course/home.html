@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="{% static "course/css/style.css"%}">
+</head>
+<body>
+    <center>
+        <h1>WELCOME TO {{name | upper}}</h1>
+    </center>
+    <img src="{% static "course/images/pic.jpg"%}" alt="image not available" id="image">
+
+    <h3>COURSES</h3>
+    <ul>
+        {% for course in courses %}
+            <li>
+                {{course | capfirst}}
+            </li>
+        {% empty %}
+            <h4>There is no course available</h4>
+        {% endfor%}
+    </ul>
+    <h3>SEATS: {{seats}}</h3>
+    <h3>Starting From {{start}}</h3>
+</body>
+</html>

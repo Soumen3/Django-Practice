@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        body{
+            background-color: rgb(116, 245, 245);
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Learn Python & Django</h1>
+    <h4>Date: {{date | date:'DATE_FORMAT'}}</h4>
+    <h4>Time: {{date | time:'TIME_FORMAT'}}</h4>
+
+    <h2>Courses</h2>
+    <ul>
+        {% for course in courses %}
+            <li>{{forloop.counter}} {{course}}</li>
+        {% empty %}
+            <p>No course is available now</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

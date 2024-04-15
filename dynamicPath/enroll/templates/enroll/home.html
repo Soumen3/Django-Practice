@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home file</h1>
+    <a href="{% url 'details' 10 %}">Student 10</a>
+    <a href="{% url 'details' 11 %}">Student 11</a>
+    <a href="{% url 'details' 12 %}">Student 12</a>
+    <a href="{% url 'details' 13 %}">Student 13</a>
+    <br>
+    <a href="{% url 'details' 10 14 %}">sub Student 10</a>
+    <a href="{% url 'details' 11 15 %}">sub Student 11</a>
+    <a href="{% url 'details' 12 16 %}">sub Student 12</a>
+    <a href="{% url 'details' 13 17 %}">sub Student 13</a>
+</body>
+</html>

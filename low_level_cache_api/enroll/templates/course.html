@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Course 1</h1>
+    <h1>Course 2</h1>
+    <h1>Course 3</h1>
+    <h1>Course 4</h1> 
+    <h1>Course 5</h1>
+    {% comment %} <h3>The name is {{fm}}</h3> {% endcomment %}
+
+    {% for key, value in fm.items %}
+        <h3>The {{key}} is {{value}}</h3>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn</title>
+
+    <link rel="stylesheet" href="{% static "css/style.css"%}">
+</head>
+
+<body>
+    <center>
+        <h1>LEARNING PYTHON, DJANGO & MANY OTHER PROGRAMMING LANGUAGES</h1>
+    </center>
+    <h3>Courses</h3>
+    <ul>
+        {% for course in courses %}
+            <li>{{course | upper}}</li>
+        {%empty%}
+            <p>There is no course</p>
+        {% endfor %}
+    </ul>
+    <p>Seats: {{seats}}</p>
+    <p>Price: {{price}}</p>
+    <h4>Now</h4>
+    <p>Date: {{date | date:'DATE_FORMAT'}}</p>
+    <p>Time: {{date | date:'TIME_FORMAT'}}</p>
+
+    <img id="img1" src="{% static "images/img.jpg"%}" alt="not available" >
+    <button onclick="disp()">click me</button>
+    
+    <script src="{% static "js/all.js" %}"></script>
+</body>
+</html>

@@ -13,5 +13,5 @@ class studentRegistration(forms.Form):
     password=forms.CharField(widget=forms.PasswordInput)
     description=forms.CharField(widget=forms.Textarea)
     notes=forms.CharField(widget=forms.Textarea(attrs={'rows':3,'cols':50}))
-
+    hidden=forms.CharField(widget=forms.HiddenInput, initial='hidden', required=False)
     agree = forms.BooleanField(label='I agree')

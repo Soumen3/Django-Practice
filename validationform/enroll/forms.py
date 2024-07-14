@@ -16,6 +16,7 @@ class studentRegistration(forms.Form):
     name = forms.CharField()
     Email = forms.EmailField()
     password = forms.CharField(widget=forms.PasswordInput)
+    hidden = forms.CharField(widget=forms.HiddenInput, initial='hidden', required=False)
 
     # def clean_name(self):
     #     valname = self.cleaned_data['name']

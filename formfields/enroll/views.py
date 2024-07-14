@@ -16,7 +16,7 @@ def formPage(request):
             print(fm.cleaned_data['agree'])
             return redirect('success')
     else:
-        fm=forms.studentRegistration()
+        fm=forms.studentRegistration(label_suffix=' ', initial={'name':'Rahul','Roll':101,'Price':100,'Rate':5.0,'agree':True})
     return render(request, 'enroll/page.html',{'form':fm})
 
 def succPage(request):

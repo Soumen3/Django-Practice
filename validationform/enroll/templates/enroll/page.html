@@ -11,9 +11,12 @@
 <body>
     <form action="" method='post' novalidate>
         {% csrf_token %}
-        {{form.non_field_errors}}
-        {% for field in form %}
+        {% comment %} {{form.non_field_errors}} {% endcomment %}
+        {% for field in form.visible_fields %}
             <div>{{field.label_tag}}{{field}} <span class="errorlist"> {{field.errors | striptags}}</span></div>
+        {% endfor %}
+        {% for field in form.hidden_fields %}
+            <div>{{field}}</div>
         {% endfor %}
         <button type="submit">Submit</button>
     </form>
